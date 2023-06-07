@@ -13,7 +13,7 @@ chsh -s $(which zsh)
 echo -e "\033[1;32mDone!\033[0m"
 
 echo -e "\033[1;32mInstalling Oh My ZSH if not exist\033[0m"
-DIR=~/.oh-my-zsh
+DIR=$HOME/.oh-my-zsh
 SIZE=$(du -s $DIR | awk '{print $1}')
 if [ $SIZE -gt 0 ]; then
   echo -e "\033[1;33mOh my zsh probably is already installed. Continue...\033[0m"
@@ -46,7 +46,7 @@ rpm -qa | grep tmux || dnf install tmux -y
 echo -e "\033[1;32mDone!\033[0m"
 
 echo -e "\033[1;32mAdding tmux plugin manager\033[0m"
-DIR=~/.tmux/plugins/tpm
+DIR=$HOME/.tmux/plugins/tpm
 if [ -d "$DIR" ]; then
   echo -e "\033[1;33mTmux plugin manager is already installed. Continue...\033[0m"
 else
@@ -67,10 +67,16 @@ if [ ! -d "$DIR" ]; then
 fi
 echo -e "\033[1;32mDone!\033[0m"
 
-# echo "Installing NVM and Node LTS"
-# curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
-# source $HOME/.zshrc
-# nvm install lts/*
-# echo "Done!"
+echo -e "\033[1;32mInstalling NVM and Node LTS if not exist\033[0m"
+DIR=$HOME/.nvm
+SIZE=$(du -s $DIR | awk '{print $1}')
+if [ $SIZE -gt 0 ]; then
+  echo -e "\033[1;33mNVM probably is already installed. Continue...\033[0m"
+else
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
+  source $HOME/.zshrc
+  nvm install lts/*
+  echo -e "\033[1;32mDone!\033[0m"
+fi
 
 echo -e "\033[1;32mInstallation finished!\033[0m"
