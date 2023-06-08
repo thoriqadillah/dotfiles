@@ -24,7 +24,7 @@ else
 fi
 
 echo -e "\033[1;32mAdding ZSH syntax highlighting\033[0m"
-DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 if [ -d "$DIR" ]; then
   echo -e "\033[1;33mZSH syntax highlighting is already installed. Continue...\033[0m"
 else
@@ -33,7 +33,7 @@ else
 fi
 
 echo -e "\033[1;32mAdding ZSH auto suggestions\033[0m"
-DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 if [ -d "$DIR" ]; then
   echo -e "\033[1;33mZSH auto suggestions is already installed. Continue...\033[0m"
 else
@@ -61,7 +61,7 @@ echo -e "\033[1;32mDone!\033[0m"
 echo -e "\033[1;32m===== Setup development environtment =====\033[0m"
 echo -e "\033[1;32mInstalling Go if not exist\033[0m"
 rpm -qa | grep zsh || dnf install golang -y
-DIR=~/.tmux/plugins/tpm
+DIR=$HOME/.tmux/plugins/tpm
 if [ ! -d "$DIR" ]; then
   mkdir -p $HOME/go
 fi
