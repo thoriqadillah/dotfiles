@@ -171,7 +171,7 @@ alias xampp="sudo /opt/lampp/lampp"
 alias cfd="cd / && z \$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"
 alias ls="exa"
 alias la="exa -la"
-alias lt="exa --tree -la"
+alias lt="exa --tree -l"
 
 # NVM
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
