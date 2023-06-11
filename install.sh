@@ -62,6 +62,10 @@ echo -e "\033[1;32mInstalling fd-find if not exist\033[0m"
 rpm -qa | grep fd-find || dnf install fd-find -y
 echo -e "\033[1;32mDone!\n\033[0m"
 
+echo -e "\033[1;32mInstalling exa if not exist\033[0m"
+rpm -qa | grep exa || dnf install exa -y
+echo -e "\033[1;32mDone!\n\033[0m"
+
 echo -e "\033[1;32m===== Setup development environtment =====\033[0m"
 echo -e "\033[1;32mInstalling Go if not exist\033[0m"
 rpm -qa | grep zsh || dnf install golang -y
