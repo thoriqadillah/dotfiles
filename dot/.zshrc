@@ -193,7 +193,4 @@ export PATH=$HOME/.config/composer/vendor/bin:~/.composer/vendor/bin:$PATH
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Flutter
-export PATH=$PATH:/home/thoriqadillah/flutter/bin
-
-export PATH=$PATH:/home/thoriqadillah/.local/bin
+eval "$(zoxide init zsh)"
