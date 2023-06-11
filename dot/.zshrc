@@ -168,7 +168,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias xampp="sudo /opt/lampp/lampp"
-alias cd="cd ~ && cd \$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"
+alias cfd="cd / && z \$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"
 
 # NVM
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
