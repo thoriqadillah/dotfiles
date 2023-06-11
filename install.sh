@@ -54,8 +54,12 @@ else
   echo -e "\033[1;32mDone!\n\033[0m"
 fi
 
-echo -e "\033[1;32mInstalling zoxide if not exist\033[0m"
-rpm -qa | grep zoxide || dnf install zoxide -y
+echo -e "\033[1;32mInstalling fd-find if not exist\033[0m"
+rpm -qa | grep fd-find || dnf install fd-find -y
+echo -e "\033[1;32mDone!\n\033[0m"
+
+echo -e "\033[1;32mInstalling fuzzy finder if not exist\033[0m"
+rpm -qa | grep fzf || dnf install fzf -y
 echo -e "\033[1;32mDone!\n\033[0m"
 
 echo -e "\033[1;32m===== Setup development environtment =====\033[0m"

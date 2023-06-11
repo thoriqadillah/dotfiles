@@ -168,7 +168,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias xampp="sudo /opt/lampp/lampp"
-alias wails="/home/thoriqadillah/go/bin/wails"
+alias cd="cd ~ && cd \$(fd --type d --hidden --exclude .git | fzf-tmux -p --reverse)"
 
 # NVM
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -192,5 +192,3 @@ export PATH=$HOME/.config/composer/vendor/bin:~/.composer/vendor/bin:$PATH
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-eval "$(zoxide init zsh)"
