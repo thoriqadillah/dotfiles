@@ -136,6 +136,8 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  fast-syntax-highlighting 
+  zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh

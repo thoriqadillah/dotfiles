@@ -41,6 +41,24 @@ else
   echo -e "\033[1;32mDone!\n\033[0m"
 fi
 
+echo -e "\033[1;32mAdding ZSH fast auto suggestions\033[0m"
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+if [ -d "$DIR" ]; then
+  echo -e "\033[1;33mZSH auto suggestions is already installed. Continue...\033[0m"
+else
+  git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+  echo -e "\033[1;32mDone!\n\033[0m"
+fi
+
+echo -e "\033[1;32mAdding ZSH autocomplete\033[0m"
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+if [ -d "$DIR" ]; then
+  echo -e "\033[1;33mZSH auto suggestions is already installed. Continue...\033[0m"
+else
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+  echo -e "\033[1;32mDone!\n\033[0m"
+fi
+
 echo -e "\033[1;32mInstalling tmux if not exist\033[0m"
 rpm -qa | grep tmux || dnf install tmux -y
 echo -e "\033[1;32mDone!\n\033[0m"
