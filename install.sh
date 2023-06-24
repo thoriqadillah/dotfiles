@@ -42,7 +42,7 @@ else
 fi
 
 echo -e "\033[1;32mAdding ZSH fast auto suggestions\033[0m"
-DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 if [ -d "$DIR" ]; then
   echo -e "\033[1;33mZSH auto suggestions is already installed. Continue...\033[0m"
 else
@@ -51,11 +51,11 @@ else
 fi
 
 echo -e "\033[1;32mAdding ZSH autocomplete\033[0m"
-DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 if [ -d "$DIR" ]; then
   echo -e "\033[1;33mZSH auto suggestions is already installed. Continue...\033[0m"
 else
-  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autocomplete
   echo -e "\033[1;32mDone!\n\033[0m"
 fi
 
