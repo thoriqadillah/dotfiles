@@ -105,4 +105,8 @@ else
   echo -e "\033[1;32mDone!\n\033[0m"
 fi
 
+echo -e "\033[1;32mInstalling clangd if not exist\033[0m"
+rpm -qa | grep clangd || dnf install clang-tools-extra -y
+echo -e "\033[1;32mDone!\n\033[0m"
+
 echo -e "\033[1;32mInstallation finished!\033[0m"
